@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+
+body > section {
+    border: 5px solid rgb(68, 68, 68);
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    background-color: beige;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: bisque;
+}
+
+.result {
+    height: 90px;
+    width: 100%;
+    margin: 3px;
+    border: 2px solid rgb(68, 68, 68);
+    border-radius: 5%;
+    background-color: white;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    padding-top: 30px;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+div:hover {
+    font-size: 35px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+.blue {
+    display: flex;
+    width: fit-content;
+}
+
+.blue div {
+    background-color: rgb(167, 167, 167);
+}
+
+.light {
+    display: flex;
+    flex-wrap: wrap;
+    width: 340px;
+}
+
+.light div {
+    background-color: rgb(68, 68, 68);
+}
+
+.light2 {
+    display: flex;
+    margin-top: auto;
+}
+
+.light2 div {
+    background-color: rgb(68, 68, 68);
+}
+
+.light2 :first-child {
+    width: 200px;
+    border-radius: 45%;
+}
+
+.right div {
+    background-color: orange;
+}
