@@ -40,15 +40,15 @@ body {
     flex-direction: column;
 }
 
-div {
-    padding-top: 30px;
+button {
+    padding-top: 5px;
     margin: 5px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
 }
 
-div:hover {
+button:hover {
     font-size: 35px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 }
@@ -58,7 +58,7 @@ div:hover {
     width: fit-content;
 }
 
-.blue div {
+.blue button {
     background-color: rgb(167, 167, 167);
 }
 
@@ -68,7 +68,7 @@ div:hover {
     width: 340px;
 }
 
-.light div {
+.light button {
     background-color: rgb(68, 68, 68);
 }
 
@@ -77,7 +77,7 @@ div:hover {
     margin-top: auto;
 }
 
-.light2 div {
+.light2 button {
     background-color: rgb(68, 68, 68);
 }
 
@@ -86,6 +86,11 @@ div:hover {
     border-radius: 45%;
 }
 
-.right div {
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right button {
     background-color: orange;
 }
