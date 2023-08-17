@@ -15,12 +15,16 @@ Algorithm
 4. Create DIV fxn with two parameters: NUM1 & NUM2
     * Return division of NUM1 by NUM2
 
-# Fxn that performs Operation
+# Fxn that performs operation
 5. Create three variables to represent the operation: FIRSTNUM, OPERATOR, SECNUM.
 6. Create OPERATE fxn with three parameters: NUM1, SIGN, NUM2.
     * If SIGN is addition, subtraction, times, or division
         - Call the right operator function to compute the NUM1 and  NUM2.
 
+# Make particular clicked buttons appear in display
+7. Declare CURRENTVALUE
+8. Set the CURRENTVALUE to the clicked number button
+9. Make the output box display CURRENTVALUE
 
 Pseudo-code
 6.
@@ -35,3 +39,15 @@ Pseudo-code
             div(num1, num2);
         END-IF
     END-FXN
+
+8.
+    LET currentValue = 0;
+
+    LET numButtons = button elements in class #light;
+    numButtons.ADDEVENTLISTENER('click', => {
+        currentValue = numButtons.textContent;
+    })
+
+    LET box = section element with class #result;
+    box.textContent = '';
+    box.textContent = currentValue;
