@@ -15,7 +15,23 @@ Algorithm
 4. Create DIV fxn with two parameters: NUM1 & NUM2
     * Return division of NUM1 by NUM2
 
+# Fxn that performs Operation
+5. Create three variables to represent the operation: FIRSTNUM, OPERATOR, SECNUM.
+6. Create OPERATE fxn with three parameters: NUM1, SIGN, NUM2.
+    * If SIGN is addition, subtraction, times, or division
+        - Call the right operator function to compute the NUM1 and  NUM2.
 
 
 Pseudo-code
-1. 
+6.
+    FXN operate(num1, sign, num2)
+        IF (sign === '+')
+            add(num1, num2);
+        ELSE-IF (sign === '-')
+            sub(num1, num2);
+        ELSE-IF (sign === '*')
+            times(num1, num2);
+        ELSE-IF (sign === '/')
+            div(num1, num2);
+        END-IF
+    END-FXN
