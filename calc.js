@@ -31,13 +31,14 @@ function operate(num1, sign, num2) {
 }
 
 let  currentValue = 0;
+let box = document.querySelector('.result');
+
 let numButtons = document.querySelectorAll('.light button');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
         currentValue = button.textContent;
+        box.textContent = '';
+        box.textContent = currentValue;
     })
 })
 
-let box = document.querySelector('.result');
-box.textContent = '';
-box.textContent = currentValue;
