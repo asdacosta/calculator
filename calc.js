@@ -1,5 +1,4 @@
 function add(num1, num2) {
-    console.log(num1 + num2);
     return num1 + num2;
 }
 
@@ -13,4 +12,20 @@ function times(num1, num2) {
 
 function div(num1, num2) {
     return num1 / num2;
+}
+
+let firstNum = 0,
+    operator = '',
+    secNum = 0;
+
+function operate(num1, sign, num2) {
+    if (sign === '+') {
+        add(num1, num2);
+    } else if (sign === '-') {
+        sub(num1, num2);
+    } else if (sign === '*') {
+        times(num1, num2);
+    } else if (sign === '/') {
+        div(num1, num2);
+    }
 }
