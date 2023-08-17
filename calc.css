@@ -31,7 +31,8 @@ body {
     height: 90px;
     width: 100%;
     margin: 3px;
-    padding: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
     border: 2px solid rgb(68, 68, 68);
     border-radius: 5%;
     background-color: white;
@@ -101,3 +102,37 @@ button:hover {
 .right button {
     background-color: orange;
 }
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.result {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+}
+  
+span {
+    display: inline-block;
+    color: black;
+    font-size: 64px;
+    padding-top: 7px;
+    animation: bounce 1.5s ease-in-out infinite; 
+}
+  
