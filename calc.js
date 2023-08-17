@@ -20,12 +20,12 @@ let firstNum = 0,
 
 function operate(num1, sign, num2) {
     if (sign === '+') {
-        add(num1, num2);
+        return add(num1, num2);
     } else if (sign === '-') {
-        sub(num1, num2);
+        return sub(num1, num2);
     } else if (sign === '*') {
-        times(num1, num2);
+        return times(num1, num2);
     } else if (sign === '/') {
-        div(num1, num2);
+        return div(num1, num2);
     }
 }
