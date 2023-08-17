@@ -33,12 +33,16 @@ function operate(num1, sign, num2) {
 let  currentValue = 0;
 let box = document.querySelector('.result');
 
+let firstClick = true;
 let numButtons = document.querySelectorAll('.light button');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
+        if (firstClick) {
+            box.textContent = '';
+            firstClick = false;
+        }
         currentValue = button.textContent;
-        box.textContent = '';
-        box.textContent = currentValue;
+        box.textContent += currentValue;
     })
 })
 
