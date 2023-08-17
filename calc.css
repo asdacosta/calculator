@@ -3,6 +3,7 @@
     text-align: center;
     font-size: 32px;
     color: white;
+    /* border: 2px solid teal; */
 }
 
 body > section {
@@ -10,7 +11,7 @@ body > section {
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    width: auto;
+    width: 470px;
     background-color: beige;
 }
 
@@ -30,14 +31,19 @@ body {
     height: 90px;
     width: 100%;
     margin: 3px;
+    padding: 10px;
     border: 2px solid rgb(68, 68, 68);
     border-radius: 5%;
     background-color: white;
+    color: black;
+    font-size: 64px;
+    text-align: right;
 }
 
 .middle {
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
 }
 
 button {
@@ -66,7 +72,7 @@ button:hover {
 .light {
     display: flex;
     flex-wrap: wrap;
-    width: 340px;
+    width: 335px;
 }
 
 .light button {
