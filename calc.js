@@ -11,7 +11,7 @@ function times(num1, num2) {
 }
 
 function div(num1, num2) {
-    num2 === 0 ? "Impossible!" : num1 / num2;
+    return num2 === 0 ? "Impossible!" : num1 / num2;
 }
 
 let firstNum = 0,
@@ -29,3 +29,15 @@ function operate(num1, sign, num2) {
         return div(num1, num2);
     }
 }
+
+let  currentValue = 0;
+let numButtons = document.querySelectorAll('.light button');
+numButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        currentValue = button.textContent;
+    })
+})
+
+let box = document.querySelector('.result');
+box.textContent = '';
+box.textContent = currentValue;
