@@ -38,7 +38,7 @@ let numButtons = document.querySelectorAll('.light button');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (firstClick) {
-            box.textContent = '';
+            box.innerHTML = '';
             firstClick = false;
         }
         currentValue = button.textContent;
