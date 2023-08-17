@@ -1,0 +1,21 @@
+Problem
+Creating a normal calculator
+
+Algorithm
+# Add fxn
+1. Create ADD fxn with two parameters: NUM1 & NUM2
+    * Return sum of NUM1 and NUM2
+# Subtract fxn
+2. Create SUB fxn with two parameters: NUM1 & NUM2
+    * Return subtraction of NUM2 from NUM1
+# Multiply fxn
+3. Create TIMES fxn with two parameters: NUM1 & NUM2
+    * Return multiplication of NUM1 and NUM2
+# Divide fxn
+4. Create DIV fxn with two parameters: NUM1 & NUM2
+    * Return division of NUM1 by NUM2
+
+
+
+Pseudo-code
+1. 
