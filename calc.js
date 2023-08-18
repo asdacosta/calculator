@@ -41,8 +41,8 @@ numButtons.forEach(button => {
             box.innerHTML = '';
             firstClick = false;
         }
-        if (numButtons[10].textContent === '.') {
-            numButtons.removeChild(numButtons.lastChild);
+        if (button.textContent === '.') {
+            button.disabled = true;
         }
 
         currentValue = button.textContent;
