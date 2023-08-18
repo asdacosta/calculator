@@ -33,13 +33,13 @@ function operate(num1, sign, num2) {
 let  currentValue = 0;
 let box = document.querySelector('.result');
 
-let firstClick = true;
+let firstClickNum = true;
 let numButtons = document.querySelectorAll('.light button, .light2 button');
-numButtons.forEach(button => {
+firstNum = numButtons.forEach(button => {
     button.addEventListener('click', () => {
-        if (firstClick) {
+        if (firstClickNum) {
             box.innerHTML = '';
-            firstClick = false;
+            firstClickNum = false;
         }
         if (button.textContent === '.') {
             button.disabled = true;
@@ -50,3 +50,16 @@ numButtons.forEach(button => {
     })
 })
 
+let signButtons = document.querySelectorAll('.right button');
+operator = signButtons.forEach(sign => {
+    sign.addEventListener('click', () => {
+        signButtons.forEach(signs => {
+        signs.style.backgroundColor = '';
+        signs.style.color = '';
+        signs.style.fontWeight = '';
+        })
+        sign.style.backgroundColor = 'white';
+        sign.style.color = 'orange';
+        sign.style.fontWeight = 'bold';
+    })
+})
