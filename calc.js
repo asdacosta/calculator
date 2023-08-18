@@ -42,8 +42,7 @@ numButtons.forEach(button => {
             firstClick = false;
         }
         if (numButtons[10].textContent === '.') {
-            numButtonsArray = Array.from(numButtons);
-            numButtonsArray.splice(10, 1);
+            numButtons.removeChild(numButtons.lastChild);
         }
 
         currentValue = button.textContent;
