@@ -34,13 +34,17 @@ let  currentValue = 0;
 let box = document.querySelector('.result');
 
 let firstClick = true;
-let numButtons = document.querySelectorAll('.light button');
+let numButtons = document.querySelectorAll('.light button, .light2 button');
 numButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (firstClick) {
             box.innerHTML = '';
             firstClick = false;
         }
+        if (button === '.') {
+            numButtons.splice(10, 1);
+        }
+        
         currentValue = button.textContent;
         box.textContent += currentValue;
     })
