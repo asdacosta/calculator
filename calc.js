@@ -41,10 +41,11 @@ numButtons.forEach(button => {
             box.innerHTML = '';
             firstClick = false;
         }
-        if (button === '.') {
-            numButtons.splice(10, 1);
+        if (numButtons[10].textContent === '.') {
+            numButtonsArray = Array.from(numButtons);
+            numButtonsArray.splice(10, 1);
         }
-        
+
         currentValue = button.textContent;
         box.textContent += currentValue;
     })
