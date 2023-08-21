@@ -24,7 +24,17 @@ Algorithm
 # Make particular clicked buttons appear in display
 7. Declare CURRENTVALUE
 8. Set the CURRENTVALUE to the clicked number button
-9. Make the output box display CURRENTVALUE
+9. Make the output box display CURRENTVALUE 
+10. Assign it to the variable FIRSTNUM
+
+# Add effect to sign buttons and make the next number input in the box be the value for SECNUM
+11. Use eventListener to add the effect to the buttons and assign to variable OPERATOR
+
+# Make the operation work
+12. When '=' is clicked
+    * If the two numbers are no more null and operator is no longer an empty string 
+        - Call right fxn according to operator, to operate on the two numbers.
+        - Update BOX with solution
 
 Pseudo-code
 6.
@@ -43,11 +53,32 @@ Pseudo-code
 8.
     LET currentValue = 0;
 
-    LET numButtons = button elements in class #light;
-    numButtons.ADDEVENTLISTENER('click', => {
+    LET numButtons = button elements in class .light;
+    LET firstNum = numButtons.ADDEVENTLISTENER('click', => {
         currentValue = numButtons.textContent;
     })
 
-    LET box = section element with class #result;
+    LET box = section element with class .result;
     box.textContent = '';
     box.textContent = currentValue;
+
+12. 
+    LET final = 0;
+    LET equals = queryselect .equals
+    equals.ADDEVENTLISTENER('click', () => {
+        IF (firstNum != null && secNum != null && operator != '')
+            SWITCH (operator)
+                CASE '+':
+                    final = ADD(firstNum, secNum);
+                CASE '-':
+                    final = SUB(firstNum, secNum);
+                CASE '*':
+                    final = TIMES(firstNum, secNum);
+                CASE '/':
+                    final = DIV(firstNum, secNum);
+            END-SWITCH
+            
+            box.INNERHTML = '';
+            box.TEXTcONTENT = final;
+        END-IF
+    })
