@@ -80,9 +80,13 @@ signButtons.forEach(sign => {
             firstNum = box.textContent;
             firstClickSign = true;
         } else {
-            // firstNum = secNum;
-            secNum = box.textContent;
-            box.innerHTML = '';
+            if (box.textContent !== '') {
+                secNum = box.textContent;
+                box.innerHTML = '';
+            } else {
+                firstNum = null;
+            }
+            
         }
 
         operator = sign.textContent;
@@ -113,6 +117,5 @@ equals.addEventListener('click', () => {
         }
         box.textContent = result;
     }
-    firstNum = secNum;
-    secNum = result;
+    firstNum = result;
 })
