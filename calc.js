@@ -89,16 +89,18 @@ signButtons.forEach(sign => {
     })
 })
 
-let result = 0,
-    fNum = +firstNum,
-    sNum = +secNum;
+let result = 0;
 let equals = document.querySelector('.equals');
 
 equals.addEventListener('click', () => {
+    let fNum = +firstNum;
+    let sNum = +secNum;
+    
     if (firstNum !== null && secNum !== null && operator !== '') {
         switch (operator) {
             case '+':
                 result = add(fNum, sNum);
+                console.log(result);
                 break;
             case '-':
                 result = sub(fNum, sNum);
@@ -110,6 +112,7 @@ equals.addEventListener('click', () => {
                 result = div(fNum, sNum);
                 break;
         }
+        console.log(result);
         box.textContent = result;
     }
 })
