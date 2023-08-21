@@ -63,7 +63,7 @@ let firstNum = 0,
 setupNumButtonClick();
 firstClickSign = false;
 
-let signButtons = document.querySelectorAll('.right button');
+let signButtons = document.querySelectorAll('.right button:not(.equals)');
 signButtons.forEach(sign => {
     sign.addEventListener('click', () => {
         signButtons.forEach(signs => {
@@ -80,7 +80,7 @@ signButtons.forEach(sign => {
             firstNum = box.textContent;
             firstClickSign = true;
         } else {
-            firstNum = secNum;
+            // firstNum = secNum;
             secNum = box.textContent;
             box.innerHTML = '';
         }
