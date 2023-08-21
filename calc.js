@@ -56,7 +56,7 @@ function setupNumButtonClick () {
     })
 }
 
-let firstNum = 0,
+let firstNum = null,
     operator = '',
     secNum = null;
 
@@ -87,4 +87,23 @@ signButtons.forEach(sign => {
 
         operator = sign.textContent;
     })
+})
+
+let result = 0;
+let equals = querySelector('.equals');
+equals.addEventListener('click', () => {
+    if (firstNum === null && secNum === null && operator != '') {
+        switch (operator) {
+            case '+':
+                result = add(firstNum, secNum);
+            case '-':
+                result = sub(firstNum, secNum);
+            case '*':
+                result = times(firstNum, secNum);
+            case '/':
+                result = div(firstNum, secNum);
+        }
+        box.innerHTML = '';
+        box.textContent = result;
+    }
 })
