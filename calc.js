@@ -15,14 +15,15 @@ function div(num1, num2) {
 }
 
 function operate(num1, sign, num2) {
-    if (sign === '+') {
-        return add(num1, num2);
-    } else if (sign === '-') {
-        return sub(num1, num2);
-    } else if (sign === '*') {
-        return times(num1, num2);
-    } else if (sign === '/') {
-        return div(num1, num2);
+    switch (sign) {
+        case '+':
+            return add(num1, num2);
+        case '-':
+            return sub(num1, num2);
+        case '*':
+            return times(num1, num2);
+        case '/':
+            return div(num1, num2);
     }
 }
 
@@ -82,7 +83,6 @@ signButtons.forEach(sign => {
         } else {
             if (box.textContent !== '') {
                 secNum = box.textContent;
-                box.innerHTML = '';
             } else {
                 firstNum = null;
             }
@@ -101,21 +101,9 @@ equals.addEventListener('click', () => {
     let sNum = +secNum;
 
     if (firstNum !== null && secNum !== null && operator !== '') {
-        switch (operator) {
-            case '+':
-                result = add(fNum, sNum);
-                break;
-            case '-':
-                result = sub(fNum, sNum);
-                break;
-            case '*':
-                result = times(fNum, sNum);
-                break;
-            case '/':
-                result = div(fNum, sNum);
-                break;
-        }
+        operate(fNum, operator, sNum);
         box.textContent = result;
     }
+    secNum = null;
     firstNum = result;
 })
