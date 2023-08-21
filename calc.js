@@ -80,6 +80,7 @@ signButtons.forEach(sign => {
             firstNum = box.textContent;
             firstClickSign = true;
         } else {
+            firstNum = secNum;
             secNum = box.textContent;
             box.innerHTML = '';
         }
