@@ -48,7 +48,7 @@ function setupNumButtonClick () {
                 if (secNum === null) {
                     box.innerHTML = '';
                 }
-                secNum = box.textContent + button.textContent;
+                secNum = +(box.textContent + button.textContent);
             }
                 
             currentValue = button.textContent;
@@ -78,11 +78,11 @@ signButtons.forEach(sign => {
         sign.style.fontWeight = 'bold';
 
         if (!firstClickSign) {
-            firstNum = box.textContent;
+            firstNum = +box.textContent;
             firstClickSign = true;
         } else {
             if (box.textContent !== '') {
-                secNum = box.textContent;
+                secNum = +box.textContent;
             } else {
                 firstNum = null;
             }
@@ -101,7 +101,7 @@ equals.addEventListener('click', () => {
     let sNum = +secNum;
 
     if (firstNum !== null && secNum !== null && operator !== '') {
-        operate(fNum, operator, sNum);
+        result = operate(fNum, operator, sNum);
         box.textContent = result;
     }
     secNum = null;
