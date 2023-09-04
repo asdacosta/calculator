@@ -63,22 +63,22 @@ Pseudo-code
     box.textContent = currentValue;
 
 12. 
-    LET final = 0;
+    LET result = 0;
     LET equals = queryselect .equals
     equals.ADDEVENTLISTENER('click', () => {
         IF (firstNum != null && secNum != null && operator != '')
             SWITCH (operator)
                 CASE '+':
-                    final = ADD(firstNum, secNum);
+                    result = ADD(firstNum, secNum);
                 CASE '-':
-                    final = SUB(firstNum, secNum);
+                    result = SUB(firstNum, secNum);
                 CASE '*':
-                    final = TIMES(firstNum, secNum);
+                    result = TIMES(firstNum, secNum);
                 CASE '/':
-                    final = DIV(firstNum, secNum);
+                    result = DIV(firstNum, secNum);
             END-SWITCH
             
             box.INNERHTML = '';
-            box.TEXTcONTENT = final;
+            box.TEXTcONTENT = result;
         END-IF
     })
