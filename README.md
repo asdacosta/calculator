@@ -20,7 +20,8 @@ Developers, users, recruiters
 ## Files
 | File | Description |
 | - | - |
+| calc.js | Contains all functionality for a normal math calculator. |
+| calc.css | Stylesheet for calculator. |
+| calc.html | Structure of website. |
 
-
-
-Originating from The Odin Project and it builds a normal calculator.
+[Calculator](https://asdacosta.github.io/calculator/)
