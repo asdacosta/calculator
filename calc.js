@@ -14,7 +14,7 @@ function div(num1, num2) {
     return num2 === 0 ? "Impossible!" : num1 / num2;
 }
 
-function operate(num1, sign, num2) {
+function operate(num1, num2, sign) {
     switch (sign) {
         case '+':
             return add(num1, num2);
@@ -28,11 +28,11 @@ function operate(num1, sign, num2) {
 }
 
 let  currentValue = 0,
-    firstNum = null,
-    secNum = null,
+    firstOperand = null,
+    secondOperand = null,
     firstOperator = null,
     secondOperator = null,
-    result = 0;
+    result = null;
 
 const buttons = document.querySelectorAll('button');
 
