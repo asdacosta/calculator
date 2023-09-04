@@ -7,7 +7,7 @@ function operate(num1, num2, sign) {
         case '*':
             return num1 * num2;
         case '/':
-            return num2 === 0 ? "Impossible!" : num1 / num2;
+            return num2 === 0 ? "Absurd" : num1 / num2;
         default:
             return num2;
     }
@@ -111,8 +111,8 @@ function inputEquals() {
     } else if(secondOperator != null) {
         secondOperand = currentValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
-        if(result === 'Impossible!') {
-            currentValue = 'Impossible!';
+        if(result === 'Absurd') {
+            currentValue = 'Absurd';
         } else {
             currentValue = roundAccurately(result, 15).toString();
             firstOperand = currentValue;
@@ -124,8 +124,8 @@ function inputEquals() {
     } else {
         secondOperand = currentValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        if(result === 'Impossible!') {
-            currentValue = 'Impossible!';
+        if(result === 'Absurd') {
+            currentValue = 'Absurd';
         } else {
             currentValue = roundAccurately(result, 15).toString();
             firstOperand = currentValue;
@@ -199,7 +199,7 @@ function roundAccurately(num, places) {
 // }
 
 // function div(num1, num2) {
-//     return num2 === 0 ? "Impossible!" : num1 / num2;
+//     return num2 === 0 ? "Absurd" : num1 / num2;
 // }
 
 // function operate(num1, sign, num2) {
