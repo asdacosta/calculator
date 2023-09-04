@@ -22,6 +22,6 @@ Developers, users, recruiters
 | - | - |
 | calc.js | Contains all functionality for a normal math calculator. |
 | calc.css | Stylesheet for calculator. |
-| calc.html | Structure of website. |
+| index.html | Structure of website. |
 
 [Calculator](https://asdacosta.github.io/calculator/)
