@@ -1,29 +1,15 @@
-function add(num1, num2) {
-    return num1 + num2;
-}
-
-function sub(num1, num2) {
-    return num1 - num2;
-}
-
-function times(num1, num2) {
-    return num1 * num2;
-}
-
-function div(num1, num2) {
-    return num2 === 0 ? "Impossible!" : num1 / num2;
-}
-
 function operate(num1, num2, sign) {
     switch (sign) {
         case '+':
-            return add(num1, num2);
+            return num1 + num2;
         case '-':
-            return sub(num1, num2);
+            return num1 - num2;
         case '*':
-            return times(num1, num2);
+            return num1 * num2;
         case '/':
-            return div(num1, num2);
+            return num2 === 0 ? "Impossible!" : num1 / num2;
+        default:
+            return num2;
     }
 }
 
